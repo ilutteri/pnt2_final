@@ -8,9 +8,9 @@
 
     <p v-if="textoInput">Cantidad de Caracteres: {{ cantidadDeCaracteres }}</p>
     <p v-if="textoInput">Cantidad de Vocales: {{ cantidadDeVocales }}</p>
-    <p v-if="textoInput">Texto en Mayuscula: {{ textoInput.toUpperCase() }}</p>
+    <p v-if="textoInput">Texto en Mayuscula: {{ mayuscula }}</p>
     <p v-if="textoInput">Texto Invertido: {{ textoInvertido }}</p>
-   
+
     <hr>
 
     <p>Respuestas 1: C - 2:C - 3: A</p>
@@ -63,9 +63,14 @@ export default {
       return contador;
     },
 
+    mayuscula(){
+      return this.textoInput.toUpperCase()
+    },
+
     textoInvertido() {
-    return this.textoInput.split("").reverse().join("");
-}
+      return this.textoInput.split("").reverse().join("");
+    }
+
 
 
   }
