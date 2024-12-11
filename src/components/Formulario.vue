@@ -34,7 +34,7 @@ export default {
   computed: {
 
     cantidadDeCaracteres() {
-      return this.textoInput ? this.textoInput.length : 0;
+      return this.textoInput.length;
     },
 
     cantidadDeVocales() {
@@ -70,8 +70,6 @@ export default {
     textoInvertido() {
       return this.textoInput.split("").reverse().join("");
     }
-
-
 
   }
 }
